@@ -1,0 +1,8 @@
+<view bindtap="lostBind">
+  <image src="{{lost}}" style="width:400rpx;height:300rpx;"></image>
+  <text>找失主</text>
+</view>
+<view bindtap="findBind">
+  <image src="{{find}}" style="width:400rpx;height:300rpx;"></image>
+  <text>找东西</text>
+</view>

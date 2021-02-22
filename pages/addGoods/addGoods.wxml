@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="background">
+    <form catchsubmit="formSubmit">
+<view style="border-radius: 20rpx;font-family: 宋体;" class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">物品名：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" bindblur='changeSearch' value="{{formValue.name}}" name="name" placeholder-class="weui-input__placeholder"  placeholder="请输入物品"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">物品描述：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.content}}" name="content" placeholder-class="weui-input__placeholder"  placeholder="请输入物品描述"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">拾到位置：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.location}}" name="location" placeholder-class="weui-input__placeholder"  placeholder="请输入拾到位置"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系方式：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.phone}}" name="phone" placeholder-class="weui-input__placeholder"  placeholder="请输入联系方式"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系人姓名：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" value="{{formValue.realname}}" name="realname" placeholder-class="weui-input__placeholder"  placeholder="请输入联系人姓名"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">拾到日期：</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+                        <view class="tui-picker-detail">
+                        {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view style="heigh:30rpx;">
+               <image src="{{imageUrl}}" bindtap="addImage" style="heigh:40rpx;float:left;"></image>
+            </view>
+            <view style="margin-top:10%;height:20%;">
+                <button style="background-color:#ADD8E6;width:90%;" formType="submit">确定</button>
+            </view>
+</view>
+</form>
+</view>
